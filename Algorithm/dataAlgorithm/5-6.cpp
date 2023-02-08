@@ -37,7 +37,7 @@ int main() {
         sum += W[i];
     }
 
-    int P;
+    /*int P;
     int left = 0;
     int right = sum;
     while (left <= right) {
@@ -53,8 +53,38 @@ int main() {
             left = P + 1;
         }
         // cout << P << endl;
+    }*/
+    int ng = -1;
+    int ok = sum;
+    while (abs(ok - ng) > 1) {
+        int mid = (ok + ng) / 2;
+        if (canDivide(W, n, mid, k)) {
+            ok = mid;
+        } else {
+            ng = mid;
+        }
     }
+    cout << ok << endl;
 
-    cout << P << endl;
-    return 0;
+    /*int mid;
+    int left = 0;
+    int right = sum;
+    while (left < right) {
+        mid = (left + right) / 2;
+        if (canDivide(W, n, mid, k)) {
+            // cout << "can divide at: ";
+            right = mid;
+
+        } else {
+            // cout << "can't divide at: ";
+            left = mid + 1;
+        }
+        // cout << P << endl;
+
+        if (left == right) {
+            break;
+        }
+    }
+    cout << left << endl;
+    return 0;*/
 }

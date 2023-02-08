@@ -50,15 +50,25 @@
     - 探索はlog2n
 
 - #include <set>
+要素が値によってソートされている集合で、重複した値は存在しない。ある値域の内の個数を調べる際は、set<int>::iterator x = lower_bound(S.begin(), S.end(), left)(以上)とupper_bound(S.begin(), S.end(), right)(より大きい)で得られたイテレーターをdistance()で距離を得ることで得る。
     - insert()
     - size()
     - clear()
     - end()
     - erase()
     - find() なければend()を返す
+    ```
+    set<int>::iterator it = S.find(n);
+    if(it == S.end()) {not founc}
+    distance(S.begin(), it);
+    ```
 
-- #include <algorithm>
+- #include <algorithm>(priority_queue)
     priority_queue<int> PQ;
     push()
     pop()
     top()
+    priority_queue<Puzzle33, decltype(Puzzle33::lessHeuristic)>でoperator指定
+
+
+atan2(y, x)

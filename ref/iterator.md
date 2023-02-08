@@ -14,7 +14,7 @@ pos = lower_bound(A, A+N, key);
 index = distance(A, pos);
 
 -> *posで値、indexにkeyを初めて超える（以上）のindex
-
+lower_boundで以上のindex
 upper_boundでより大きいになる
 binary_searchは含まれているかどうかのbool
 

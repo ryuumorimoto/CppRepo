@@ -49,6 +49,7 @@ void dfs(int vertex) {
     }
 }
 
+
 int main() {
     // initialize
     rep(i, MAXNUM + 1) {
